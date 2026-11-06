@@ -26,7 +26,7 @@ export default function PhotoPicker({ previewUrl, onSelect }: PhotoPickerProps) 
   return (
     <label className="flex cursor-pointer flex-col items-center gap-2 rounded-2xl border border-dashed border-neutral-300 px-6 py-8 text-center transition duration-300 hover:border-black hover:bg-neutral-50">
       <ImagePlus className="h-6 w-6 text-neutral-500" strokeWidth={1.5} />
-      <span className="text-sm font-medium">Add a photo (optional)</span>
+      <span className="text-sm font-medium">Attach a photo (optional)</span>
       <span className="text-xs text-neutral-500">JPG, PNG or WEBP up to 5 MB</span>
       <input
         type="file"
