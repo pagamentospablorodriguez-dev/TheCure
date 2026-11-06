@@ -15,27 +15,27 @@ export default function RitualComplete({ intention, onRestart, onOpenForm }: Rit
         <Check className="h-8 w-8 text-white" strokeWidth={1.5} />
       </div>
 
-      <h2 className="mt-10 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">Session complete.</h2>
+      <h2 className="mt-10 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">Session Complete.</h2>
       <p className="mt-5 max-w-md leading-relaxed text-neutral-400">
-        Take a deep breath. Your intention <span className="text-white">"{intention}"</span> has been recorded and the
-        session has ended.
+        Take a deep breath. Your intention <span className="text-white">"{intention}"</span> has been fully processed
+        and the session is closed.
       </p>
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-        <ShareButton />
+        <ShareButton label="Share this session" />
         <button
           type="button"
           onClick={onOpenForm}
           className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition duration-300 hover:bg-neutral-200"
         >
-          Share a testimonial
+          Share your experience
         </button>
         <button
           type="button"
           onClick={onRestart}
           className="rounded-full px-5 py-2.5 text-sm text-neutral-400 transition duration-300 hover:text-white"
         >
-          New session
+          Begin new session
         </button>
       </div>
 
