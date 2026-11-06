@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { SYMBOL_ON_BLACK } from '@/lib/brand';
 
 const PHASES = [
-  { title: 'Tuning in', detail: 'Aligning frequency with intention.' },
-  { title: 'Active transmission', detail: 'Reversing dissonance.' },
-  { title: 'Integration', detail: 'Grounding the permanent state of health.' },
+  { title: 'Locking Frequency', detail: 'Isolating the affliction pattern in your field.' },
+  { title: 'Cellular Neutralization', detail: 'Eradicating root causes and reversing dissonance.' },
+  { title: 'Absolute Restoration', detail: 'Locking in the permanent state of pristine health.' },
 ];
 const PHASE_STARTS_MS = [0, 2600, 5600];
 const COMPLETE_AT_MS = 7800;
@@ -67,7 +67,7 @@ export default function RitualSequence({ intention, onComplete }: RitualSequence
           {PHASES[phaseIndex].title}
         </p>
         <p className="text-sm text-neutral-400">{PHASES[phaseIndex].detail}</p>
-        <p className="text-xs text-neutral-600">{intention}</p>
+        <p className="text-xs text-neutral-600 font-mono">Target: {intention}</p>
       </div>
     </div>
   );
