@@ -5,13 +5,14 @@ type ShareStatus = 'idle' | 'copied' | 'failed';
 
 interface ShareButtonProps {
   className?: string;
+  label?: string;
 }
 
 function isAbortError(error: unknown): boolean {
   return error instanceof DOMException && error.name === 'AbortError';
 }
 
-export default function ShareButton({ className = '' }: ShareButtonProps) {
+export default function ShareButton({ className = '', label = 'Share' }: ShareButtonProps) {
   const [status, setStatus] = useState<ShareStatus>('idle');
 
   async function copyLink(url: string) {
@@ -39,7 +40,7 @@ export default function ShareButton({ className = '' }: ShareButtonProps) {
     await copyLink(url);
   }
 
-  const label = status === 'copied' ? 'Link copied' : status === 'failed' ? 'Could not copy' : 'Share';
+  const text = status === 'copied' ? 'Link copied' : status === 'failed' ? 'Could not copy' : label;
   const Icon = status === 'copied' ? Check : Share2;
 
   return (
@@ -49,7 +50,7 @@ export default function ShareButton({ className = '' }: ShareButtonProps) {
       className={`inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-white transition duration-300 hover:border-white hover:bg-white hover:text-black ${className}`}
     >
       <Icon className="h-4 w-4" />
-      <span>{label}</span>
+      <span>{text}</span>
     </button>
   );
 }
