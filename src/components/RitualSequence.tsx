@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import { SYMBOL_ON_BLACK } from '@/lib/brand';
 
-const PHASES = ['Tuning in', 'Active frequency', 'Wrapping up'];
+const PHASES = [
+  { title: 'Tuning in', detail: 'Aligning frequency with intention.' },
+  { title: 'Active transmission', detail: 'Gathering momentum.' },
+  { title: 'Integration', detail: 'Settling into stillness.' },
+];
 const PHASE_STARTS_MS = [0, 2600, 5600];
 const COMPLETE_AT_MS = 7800;
 const RING_DELAYS_S = [0, 1, 2, 3];
@@ -60,9 +64,10 @@ export default function RitualSequence({ intention, onComplete }: RitualSequence
           className="text-sm uppercase tracking-[0.3em] text-neutral-200 animate-fade-up"
           role="status"
         >
-          {PHASES[phaseIndex]}
+          {PHASES[phaseIndex].title}
         </p>
-        <p className="text-sm text-neutral-500">{intention}</p>
+        <p className="text-sm text-neutral-400">{PHASES[phaseIndex].detail}</p>
+        <p className="text-xs text-neutral-600">{intention}</p>
       </div>
     </div>
   );
