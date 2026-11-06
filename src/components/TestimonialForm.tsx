@@ -125,7 +125,7 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="pr-10">
               <h2 id="testimonial-form-title" className="text-2xl font-semibold tracking-tight">
-                Share a testimonial
+                Share your experience
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-neutral-500">
                 Tell us about your session. Testimonials are reviewed before they are published.
@@ -144,7 +144,7 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
                   onClick={handleAnonymousToggle}
                   className="flex items-center gap-2 text-xs text-neutral-600"
                 >
-                  Keep me anonymous
+                  Keep anonymous
                   <span
                     className={`relative inline-flex h-5 w-9 items-center rounded-full transition duration-300 ${
                       isAnonymous ? 'bg-black' : 'bg-neutral-300'
@@ -201,7 +201,7 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
               disabled={status === 'submitting'}
               className="w-full rounded-full bg-black px-6 py-3.5 text-sm font-medium text-white transition duration-300 hover:bg-neutral-800 disabled:cursor-wait disabled:opacity-60"
             >
-              {status === 'submitting' ? 'Sending...' : 'Submit for review'}
+              {status === 'submitting' ? 'Sending...' : 'Submit for moderation'}
             </button>
           </form>
         )}
