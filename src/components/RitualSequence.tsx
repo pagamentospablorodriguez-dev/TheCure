@@ -3,8 +3,8 @@ import { SYMBOL_ON_BLACK } from '@/lib/brand';
 
 const PHASES = [
   { title: 'Tuning in', detail: 'Aligning frequency with intention.' },
-  { title: 'Active transmission', detail: 'Gathering momentum.' },
-  { title: 'Integration', detail: 'Settling into stillness.' },
+  { title: 'Active transmission', detail: 'Reversing dissonance.' },
+  { title: 'Integration', detail: 'Grounding the permanent state of health.' },
 ];
 const PHASE_STARTS_MS = [0, 2600, 5600];
 const COMPLETE_AT_MS = 7800;
