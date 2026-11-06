@@ -17,7 +17,6 @@ export default function RitualSection({ onOpenForm }: RitualSectionProps) {
   const handleStart = useCallback(async (value: string) => {
     setIntention(value);
     setPhase('running');
-    // Salva a sessão, IP e intenção de forma assíncrona no banco de dados
     await logCureSession(value);
   }, []);
 
@@ -45,7 +44,7 @@ export default function RitualSection({ onOpenForm }: RitualSectionProps) {
               Absolute healing for any condition.
             </h1>
             <p className="mx-auto mt-6 max-w-sm leading-relaxed text-neutral-400">
-              Instantaneous frequency restoration. Enter your disease or affliction and let the transmission reset your biology.
+              Instantaneous frequency restoration. Enter your affliction and let the transmission reset your biology in real time.
             </p>
             <RitualIntake onStart={handleStart} />
           </div>
