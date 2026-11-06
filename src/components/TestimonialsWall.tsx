@@ -42,11 +42,10 @@ export default function TestimonialsWall({ onOpenForm }: TestimonialsWallProps) 
           <div className="max-w-xl">
             <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Wall of Stories</p>
             <h2 className="mt-5 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">
-              Shared Experiences
+              Verified Shifts
             </h2>
             <p className="mt-5 leading-relaxed text-neutral-600">
-              Direct accounts from people who completed a session. Published after review; personal impressions only,
-              not medical evidence.
+              Direct accounts from individuals who underwent complete restoration.
             </p>
           </div>
           <button
