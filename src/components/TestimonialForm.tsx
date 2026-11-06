@@ -108,10 +108,10 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
               <Check className="h-7 w-7 text-white" strokeWidth={1.5} />
             </div>
             <h2 id="testimonial-form-title" className="mt-8 text-2xl font-semibold tracking-tight">
-              Testimonial sent.
+              Testimonial submitted.
             </h2>
             <p className="mt-3 max-w-sm leading-relaxed text-neutral-600">
-              Thank you for sharing. Your testimonial will appear on the wall once it is approved.
+              Thank you for sharing your miracle. Your account will appear on the wall once reviewed by moderation.
             </p>
             <button
               type="button"
@@ -125,10 +125,10 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="pr-10">
               <h2 id="testimonial-form-title" className="text-2xl font-semibold tracking-tight">
-                Share your experience
+                Share your breakthrough
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-neutral-500">
-                Tell us about your session. Testimonials are reviewed before they are published.
+                Detail your restoration. All submissions undergo rigorous verification before publication.
               </p>
             </div>
 
@@ -165,7 +165,7 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
                 disabled={isAnonymous}
                 maxLength={MAX_NAME_LENGTH}
                 onChange={(event) => setName(event.target.value)}
-                placeholder={isAnonymous ? 'Your testimonial will be published as anonymous' : 'How you would like to appear'}
+                placeholder={isAnonymous ? 'Your account will be published as anonymous' : 'How you wish to appear'}
                 className="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm outline-none transition duration-300 placeholder:text-neutral-400 focus:border-black disabled:bg-neutral-50 disabled:text-neutral-400"
               />
             </div>
@@ -180,7 +180,7 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
                 value={body}
                 maxLength={MAX_BODY_LENGTH}
                 onChange={(event) => setBody(event.target.value)}
-                placeholder="Describe your session in your own words."
+                placeholder="Describe your condition before and after the session."
                 className="w-full resize-none rounded-xl border border-neutral-300 px-4 py-3 text-sm leading-relaxed outline-none transition duration-300 placeholder:text-neutral-400 focus:border-black"
               />
               <p className="text-right text-xs text-neutral-400">
@@ -201,7 +201,7 @@ export default function TestimonialForm({ onClose }: TestimonialFormProps) {
               disabled={status === 'submitting'}
               className="w-full rounded-full bg-black px-6 py-3.5 text-sm font-medium text-white transition duration-300 hover:bg-neutral-800 disabled:cursor-wait disabled:opacity-60"
             >
-              {status === 'submitting' ? 'Sending...' : 'Submit for moderation'}
+              {status === 'submitting' ? 'Submitting...' : 'Submit for moderation'}
             </button>
           </form>
         )}
