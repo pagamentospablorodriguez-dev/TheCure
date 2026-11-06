@@ -40,12 +40,12 @@ export default function TestimonialsWall({ onOpenForm }: TestimonialsWallProps) 
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Wall of Stories</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Wall of Restoration</p>
             <h2 className="mt-5 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">
-              Verified Shifts
+              Verified Miracles & Shifts
             </h2>
             <p className="mt-5 leading-relaxed text-neutral-600">
-              Direct accounts from individuals who underwent complete restoration.
+              Direct accounts from individuals worldwide who underwent instantaneous healing.
             </p>
           </div>
           <button
