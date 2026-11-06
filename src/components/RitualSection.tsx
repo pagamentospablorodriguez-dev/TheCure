@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react';
 import RitualIntake from '@/components/RitualIntake';
 import RitualSequence from '@/components/RitualSequence';
 import RitualComplete from '@/components/RitualComplete';
+import { logCureSession } from '@/lib/sessions';
 
 type RitualPhase = 'intake' | 'running' | 'complete';
 
@@ -13,9 +14,11 @@ export default function RitualSection({ onOpenForm }: RitualSectionProps) {
   const [phase, setPhase] = useState<RitualPhase>('intake');
   const [intention, setIntention] = useState('');
 
-  const handleStart = useCallback((value: string) => {
+  const handleStart = useCallback(async (value: string) => {
     setIntention(value);
     setPhase('running');
+    // Salva a sessão, IP e intenção de forma assíncrona no banco de dados
+    await logCureSession(value);
   }, []);
 
   const handleComplete = useCallback(() => setPhase('complete'), []);
@@ -38,12 +41,11 @@ export default function RitualSection({ onOpenForm }: RitualSectionProps) {
       <div className="relative w-full max-w-xl text-center">
         {phase === 'intake' && (
           <div className="animate-fade-up">
-           
             <h1 className="mt-6 text-5xl font-semibold leading-[1.1] tracking-tight sm:text-6xl">
-              The definitive state of complete restoration.
+              Absolute healing for any condition.
             </h1>
             <p className="mx-auto mt-6 max-w-sm leading-relaxed text-neutral-400">
-              Enter your intention, select your condition or focus, and initiate the frequency transmission.
+              Instantaneous frequency restoration. Enter your disease or affliction and let the transmission reset your biology.
             </p>
             <RitualIntake onStart={handleStart} />
           </div>
