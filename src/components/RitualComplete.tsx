@@ -17,8 +17,7 @@ export default function RitualComplete({ intention, onRestart, onOpenForm }: Rit
 
       <h2 className="mt-10 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">Session Complete.</h2>
       <p className="mt-5 max-w-md leading-relaxed text-neutral-400">
-        Take a deep breath. Your intention <span className="text-white">"{intention}"</span> has been fully processed
-        and the session is closed.
+        Take a deep breath. Your intention <span className="text-white">"{intention}"</span> has been fully processed, and your condition has met its absolute resolution.
       </p>
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -28,18 +27,17 @@ export default function RitualComplete({ intention, onRestart, onOpenForm }: Rit
           onClick={onOpenForm}
           className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition duration-300 hover:bg-neutral-200"
         >
-          Share your experience
+          Share Your Breakthrough
         </button>
         <button
           type="button"
           onClick={onRestart}
           className="rounded-full px-5 py-2.5 text-sm text-neutral-400 transition duration-300 hover:text-white"
         >
-          Begin new session
+          Begin New Session
         </button>
       </div>
 
-      <p className="mt-16 max-w-md text-xs leading-relaxed text-neutral-600">{DISCLAIMER}</p>
     </div>
   );
 }
