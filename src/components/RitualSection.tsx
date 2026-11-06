@@ -17,14 +17,23 @@ export default function RitualSection({ onOpenForm }: RitualSectionProps) {
   const handleStart = useCallback(async (value: string) => {
     setIntention(value);
     setPhase('running');
+    
+    // Rola suavemente para o topo da página no momento exato do clique
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Salva a sessão, IP e intenção no banco de dados de forma segura
     await logCureSession(value);
   }, []);
 
-  const handleComplete = useCallback(() => setPhase('complete'), []);
+  const handleComplete = useCallback(() => {
+    setPhase('complete');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const handleRestart = useCallback(() => {
     setIntention('');
     setPhase('intake');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
