@@ -1,8 +1,8 @@
 import { useState, type FormEvent } from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const PRESETS = ['Absolute Health', 'Cellular Renewal', 'Complete Vitality', 'Deep Equilibrium', 'Pain Release'];
-const MAX_INTENTION_LENGTH = 120;
+const PRESETS = ['Complete Cellular Healing', 'Absolute Pain Eradication', 'Immune System Restoration', 'Vitality Realignment', 'Deep Chronic Relief'];
+const MAX_INTENTION_LENGTH = 150;
 
 interface RitualIntakeProps {
   onStart: (intention: string) => void;
@@ -31,9 +31,9 @@ export default function RitualIntake({ onStart }: RitualIntakeProps) {
   return (
     <form onSubmit={handleSubmit} className="mt-12 space-y-8">
       <div className="space-y-2">
-        <p className="text-lg font-medium text-white">Tune in to your intention.</p>
+        <p className="text-lg font-medium text-white">State your condition or intention.</p>
         <p className="text-sm leading-relaxed text-neutral-500">
-          Select a preset or specify any physical, mental, or emotional condition you wish to overcome.
+          Select a focus or type any disease, illness, or physical condition you wish to instantly eradicate.
         </p>
       </div>
 
@@ -60,7 +60,7 @@ export default function RitualIntake({ onStart }: RitualIntakeProps) {
 
       <div>
         <label htmlFor="intention" className="sr-only">
-          Describe your intention
+          Describe any condition or disease to cure
         </label>
         <input
           id="intention"
@@ -68,7 +68,7 @@ export default function RitualIntake({ onStart }: RitualIntakeProps) {
           value={custom}
           maxLength={MAX_INTENTION_LENGTH}
           onChange={(event) => handleCustomChange(event.target.value)}
-          placeholder="Describe the condition or intent..."
+          placeholder="Type any disease, pain, or condition to cure instantly..."
           className="w-full rounded-full border border-white/15 bg-neutral-950 px-6 py-4 text-center text-base text-white placeholder:text-neutral-500 outline-none transition duration-300 focus:border-white/60"
         />
       </div>
@@ -78,7 +78,7 @@ export default function RitualIntake({ onStart }: RitualIntakeProps) {
         disabled={!intention}
         className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition duration-300 hover:bg-neutral-200 disabled:cursor-not-allowed disabled:opacity-30"
       >
-        Initiate Cure Session
+        Initialize Instant Cure
         <ArrowRight className="h-4 w-4 transition duration-300 group-hover:translate-x-1" />
       </button>
     </form>
