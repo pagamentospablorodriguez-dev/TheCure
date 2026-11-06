@@ -38,12 +38,12 @@ export default function RitualSection({ onOpenForm }: RitualSectionProps) {
       <div className="relative w-full max-w-xl text-center">
         {phase === 'intake' && (
           <div className="animate-fade-up">
-            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Wellness session</p>
+           
             <h1 className="mt-6 text-5xl font-semibold leading-[1.1] tracking-tight sm:text-6xl">
-              Tune in to your intention.
+              The definitive state of complete restoration.
             </h1>
             <p className="mx-auto mt-6 max-w-sm leading-relaxed text-neutral-400">
-              Choose a word or write what you are looking for. When you are ready, start the session.
+              Enter your intention, select your condition or focus, and initiate the frequency transmission.
             </p>
             <RitualIntake onStart={handleStart} />
           </div>
