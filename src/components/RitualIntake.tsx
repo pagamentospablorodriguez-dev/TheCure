@@ -1,7 +1,13 @@
 import { useState, type FormEvent } from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const PRESETS = ['Complete Cellular Healing', 'Absolute Pain Eradication', 'Immune System Restoration', 'Vitality Realignment', 'Deep Chronic Relief'];
+const PRESETS = [
+  'Cellular Eradication',
+  'Chronic Pain Nullification',
+  'Systemic Rejuvenation',
+  'Complete Biological Reset',
+  'Immune Supremacy',
+];
 const MAX_INTENTION_LENGTH = 150;
 
 interface RitualIntakeProps {
@@ -31,9 +37,9 @@ export default function RitualIntake({ onStart }: RitualIntakeProps) {
   return (
     <form onSubmit={handleSubmit} className="mt-12 space-y-8">
       <div className="space-y-2">
-        <p className="text-lg font-medium text-white">State your condition or intention.</p>
+        <p className="text-lg font-medium text-white">Target your condition.</p>
         <p className="text-sm leading-relaxed text-neutral-500">
-          Select a focus or type any disease, illness, or physical condition you wish to instantly eradicate.
+          Select a biological focus or type any disease, illness, or affliction you require to be instantly eradicated.
         </p>
       </div>
 
@@ -60,7 +66,7 @@ export default function RitualIntake({ onStart }: RitualIntakeProps) {
 
       <div>
         <label htmlFor="intention" className="sr-only">
-          Describe any condition or disease to cure
+          Describe any disease or condition to cure
         </label>
         <input
           id="intention"
@@ -68,7 +74,7 @@ export default function RitualIntake({ onStart }: RitualIntakeProps) {
           value={custom}
           maxLength={MAX_INTENTION_LENGTH}
           onChange={(event) => handleCustomChange(event.target.value)}
-          placeholder="Type any disease, pain, or condition to cure instantly..."
+          placeholder="Type any disease, pain, or affliction to cure instantly..."
           className="w-full rounded-full border border-white/15 bg-neutral-950 px-6 py-4 text-center text-base text-white placeholder:text-neutral-500 outline-none transition duration-300 focus:border-white/60"
         />
       </div>
