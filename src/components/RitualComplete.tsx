@@ -1,5 +1,5 @@
 import { Check, Heart } from 'lucide-react';
-import ShareButton '@/components/ShareButton';
+import ShareButton from '@/components/ShareButton';
 
 interface RitualCompleteProps {
   intention: string;
