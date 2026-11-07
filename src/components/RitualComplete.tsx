@@ -16,30 +16,30 @@ export default function RitualComplete({ intention, onRestart, onOpenForm }: Rit
 
       <h2 className="mt-10 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">Restoration Complete.</h2>
       <p className="mt-5 max-w-md leading-relaxed text-neutral-400">
-        Your condition <span className="text-white font-medium">"{intention}"</span> has been completely eradicated. Your biology is now successfully restored to absolute health.
+        Your condition <span className="text-white font-medium">"{intention}"</span> has been completely neutralized. Your biology is now successfully restored.
       </p>
 
-      {/* Bloco de Conversão de Doação via Stripe por Gratidão */}
-      <div className="mt-8 w-full max-w-md rounded-3xl border border-white/15 bg-neutral-900/90 p-6 text-left backdrop-blur-md shadow-2xl">
+      {/* Bloco de Conversão de Doação por Gratidão (Otimizado) */}
+      <div className="mt-8 w-full max-w-md rounded-3xl border border-white/20 bg-neutral-900/95 p-6 text-left backdrop-blur-md shadow-2xl">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white">
-            <Heart className="h-5 w-5 text-red-500 fill-red-500/20" />
+            <Heart className="h-5 w-5 text-red-500 fill-red-500/30" />
           </div>
           <div>
-            <h3 className="text-sm font-medium text-white">Honor Your Healing</h3>
-            <p className="text-xs text-neutral-400">Keep TheCure.pro active saving lives globally.</p>
+            <h3 className="text-sm font-medium text-white">Honor Your Restoration</h3>
+            <p className="text-xs text-neutral-400">Keep the frequency active for millions worldwide.</p>
           </div>
         </div>
         <p className="mt-4 text-xs leading-relaxed text-neutral-300">
-          TheCure.pro operates as a universal public infrastructure. If your affliction has been dissolved and you wish to express gratitude for your restored life, support our servers and expansion.
+          This session was delivered to you instantly and free of charge. If your affliction has been dissolved and you wish to express gratitude, your contribution directly maintains our global servers active 24/7.
         </p>
         <a
-          href="https://donate.stripe.com/aFa9AT2R343g9R9bUzb7y0k"
+          href="https://buy.stripe.com/your_link_here"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 flex w-full items-center justify-center rounded-full bg-white py-3 text-sm font-medium text-black transition duration-300 hover:bg-neutral-200 shadow-lg"
+          className="mt-5 flex w-full items-center justify-center rounded-full bg-white py-3.5 text-sm font-medium text-black transition duration-300 hover:bg-neutral-200 shadow-lg tracking-wide"
         >
-          Send Gratitude Donation
+          Send Gratitude Contribution ($25)
         </a>
       </div>
 
