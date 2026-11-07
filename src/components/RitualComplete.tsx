@@ -206,7 +206,7 @@ export default function RitualComplete({ intention, onRestart, onOpenForm }: Rit
           rel="noopener noreferrer"
           className="mt-5 flex w-full items-center justify-center rounded-full bg-white py-3.5 text-sm font-medium text-black transition duration-300 hover:bg-neutral-200 shadow-lg tracking-wide"
         >
-          Send Gratitude Contribution<br>(Suggested: $100)
+          Send Gratitude Contribution<br />(Suggested: $100)
         </a>
       </div>
 
