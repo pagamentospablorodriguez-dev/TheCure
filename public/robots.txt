@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thecure.pro/sitemap.xml
