@@ -34,7 +34,7 @@ export default function RitualComplete({ intention, onRestart, onOpenForm }: Rit
           This session was delivered to you instantly and free of charge. If your affliction has been dissolved and you wish to express gratitude, your contribution directly maintains our global servers active 24/7.
         </p>
         <a
-          href="https://buy.stripe.com/your_link_here"
+          href="https://donate.stripe.com/aFa9AT2R343g9R9bUzb7y0k"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 flex w-full items-center justify-center rounded-full bg-white py-3.5 text-sm font-medium text-black transition duration-300 hover:bg-neutral-200 shadow-lg tracking-wide"
